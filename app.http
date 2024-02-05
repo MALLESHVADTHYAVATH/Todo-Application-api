@@ -1,0 +1,50 @@
+# API 1: Get Todos by Status
+GET http://localhost:3000/todos/?status=TO%20DO
+
+# API 2: Get Todos by Priority
+GET http://localhost:3000/todos/?priority=HIGH
+
+# API 3: Get Todos by Priority and Status
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+# API 4: Get Todos by Text Search
+GET http://localhost:3000/todos/?search_q=Buy
+
+# API 5: Get Todos by Category and Status
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+# API 6: Get Todos by Category
+GET http://localhost:3000/todos/?category=HOME
+
+# API 7: Get Todos by Category and Priority
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+# API 8: Get Todo by ID
+GET http://localhost:3000/todos/1
+
+# API 9: Get Todos by Due Date
+GET http://localhost:3000/agenda/?date=2021-12-12
+
+# API 10: Create Todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "todo": "Buy groceries",
+  "category": "HOME",
+  "priority": "MEDIUM",
+  "status": "TO DO",
+  "dueDate": "2022-02-15"
+}
+ PUT http://localhost:3000/todos/:todoId/
+ { "status": "DONE" }
+ PUT http://localhost:3000/todos/:todoId/
+ { "priority": "HIGH" }
+ PUT http://localhost:3000/todos/:todoId/
+ {
+"todo": "Clean the garden"
+}
+ PUT http://localhost:3000/todos/:todoId/
+ { "category": "LEARNING" }
+ PUT http://localhost:3000/todos/:todoId/
+ { "dueDate": "2021-01-12" }
